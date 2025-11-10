@@ -27,3 +27,7 @@ cache/
 *.tar.gz
 *.Rcheck/
 
+# data
+
+data/*.csv
+data/*.xlsx
