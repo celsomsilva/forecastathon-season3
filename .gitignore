@@ -4,6 +4,7 @@
 .Rproj.user/
 .Ruserdata
 .Rapp.history
+.rds
 
 # RStudio files
 *.Rproj
