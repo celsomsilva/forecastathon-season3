@@ -96,7 +96,7 @@ This layer is intentionally private until the competition ends.
 
 ## Target Series (Overview)
 
-### **CPIZ25 – Inflation (MoM)**
+### CPIZ25 – Inflation (MoM)
 
 * GLM-based modeling with Gaussian/Gamma alternatives
 * Strong regime sensitivity
@@ -104,7 +104,7 @@ This layer is intentionally private until the competition ends.
 * Often close to consensus but improves turning-point detection
 
 
-### **GDPF26 – GDP (QoQ)**
+### GDPF26 – GDP (QoQ)
 
 * Much smoother series
 * Gaussian GLMs work well
@@ -112,7 +112,7 @@ This layer is intentionally private until the competition ends.
 * Focus is on stability rather than squeezing minor variance
 
 
-### **UERF26 – Unemployment (MoM, forward)**
+### UERF26 – Unemployment (MoM, forward)
 
 * Noisy, revision-prone series
 * Requires extremely parsimonious models
@@ -120,7 +120,7 @@ This layer is intentionally private until the competition ends.
 * Gaussian vs Gamma tested for asymmetry and tail behavior
 
 
-### **UERZ25 – Unemployment (MoM, near-term)**
+### UERZ25 – Unemployment (MoM, near-term)
 
 * More sensitive to immediate labor market shifts
 * Helps cross-validate the UERF26 design
