@@ -1,187 +1,169 @@
-![Blockchain](https://img.shields.io/badge/Blockchain-Autonomy-blue)
-![R](https://img.shields.io/badge/R-4.4.0-blue?logo=r)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+# Forecastathon – Statistical Modeling & Predictive Strategy (Research Edition)
 
+**Forecast Blockchain Academy**
 
-# **Forecastathon – Statistical Modeling & Predictive Strategy (Research Edition)** - Forecast Blockchain Academy 
-
-*A high-level overview of my modeling approach for the Autonity Forecastathon, without exposing implementation details during the competition.*
+*A high-level overview of my modeling strategy for the Autonity Forecastathon — without revealing implementation details during the competition.*
 
 ---
 
 ## Project Status
 
-This repository is **work-in-progress**.  
+Work in progress — this repo will expand throughout the season.
 
---
+---
 
 ## Introduction
 
-This repository documents my **research, methodology, and modeling framework** developed for the **Autonity Forecastathon**, a competitive environment where participants forecast macroeconomic indicators such as:
+This repository documents the **research, methodology, and modeling framework** I use in the **Autonity Forecastathon**, a forecasting competition covering macroeconomic indicators such as:
 
-- **CPIZ25** – Inflation (MoM)  
-- **GDPF26** – GDP growth (QoQ)  
-- **UERF26** – Unemployment (MoM) – forward contract  
-- **UERZ25** – Unemployment (MoM) – nearer expiry / alternative contract
+* **CPIZ25** – Inflation (MoM)
+* **GDPF26** – GDP (QoQ)
+* **UERF26** – Unemployment (MoM, forward)
+* **UERZ25** – Unemployment (MoM, near-term contract)**
 
-The goal of this repository is to provide:
+The goal here is to present:
 
-- A transparent **conceptual overview** of my forecasting pipeline  
-- A **structured space** where the full implementation will be published **after the season ends**  
-- A professional-level reference of the modeling architecture used throughout the competition
+* A clear **conceptual overview** of the forecasting pipeline
+* A structured place where the **full implementation** will be published **after the season ends**
+* A professional reference describing the modeling architecture behind the strategy
 
-**Note**  
-No source code, models, or exact formulas are included at this stage to preserve competitive integrity.  
-All implementation assets will be released **after the Forecastathon concludes**.
+**Note:**
+No source code, formulas, or parameter details are included until the competition concludes.
 
 ---
 
 ## Project Goals
 
-1. Build a **robust, explainable and statistically grounded forecasting framework**.  
-2. Leverage **Generalized Linear Models (GLMs)** (Gaussian and Gamma families) and classical statistical techniques to outperform naïve or purely black-box models.  
-3. Incorporate **structural regimes**, **lags**, and **economic reasoning** into model specification.  
-4. Develop a **systematic approach** for mapping predicted changes into **forecast prices** used by Autex/Autonity.  
-5. Maintain reproducibility and modularity for future research and portfolio demonstration.
+1. Build a **statistically grounded, explainable forecasting framework**.
+2. Prioritize **GLMs** (Gaussian & Gamma) and classical statistical reasoning over blind black-box models.
+3. Explicitly incorporate **lags**, **regimes**, and **economic structure** into model design.
+4. Translate predictions into **forecast prices** aligned with Autonity’s mark-price mechanics.
+5. Keep the workflow reproducible and modular for future research or portfolio use.
 
 ---
 
 ## Modeling Philosophy
 
-My strategy is built on the following pillars:
+### 1. Interpretability First
 
-### 1. Statistical Interpretability First  
+Instead of defaulting to ARIMA/Prophet/neural networks, the approach emphasizes:
 
-While many competitors rely on ARIMA, Prophet, or ad-hoc neural networks, this framework prioritizes:
+* GLMs (Gaussian link = identity, Gamma link = log)
+* Regime-aware decomposition
+* Diagnostics-driven selection
+* Economic plausibility
 
-- **GLMs** (Gaussian with identity link, Gamma with log link)  
-- Regime-shift decomposition  
-- Diagnostics-based model selection  
-- Economic plausibility and parsimony  
+This keeps the model understandable and stable — qualities that matter in real forecasting, not just competitions.
 
-This provides clarity, robustness, and explainability — essential in real-world forecasting.
-
----
 
 ### 2. Structured Lag Engineering
 
-Macro indicators often respond with delay.  
-The workflow systematically tests:
+Macro signals rarely move instantly.
+The framework systematically evaluates:
 
-- `lag1`, `lag2`, `lag3` (when relevant)  
-- Interactions with structural regimes  
-- Stability under rolling windows and subperiods  
+* 1–3 month lags
+* Regime-lag interactions
+* Stability across rolling windows
 
-Only statistically significant or economically reasonable lags are retained.
+Only lags that make statistical and economic sense are kept.
 
----
 
 ### 3. Regime-Sensitive Modeling
 
-Economic time series exhibit sharp structural breaks.  
-The methodology accounts for regimes such as:
+Economic time series change character during:
 
-- **Pandemic period**  
-- **High inflation period**  
-- **Normalization / post-pandemic transition**  
+* COVID
+* High inflation periods
+* Post-pandemic normalization
 
-This prevents models from being biased by extreme or atypical historical events.
+Ignoring regime shifts tends to mislead models.
+This approach treats structural breaks as first-class modeling components.
 
----
 
-### 4. Clean Mapping from Prediction → Price
+### 4. Clean Prediction → Price Mapping
 
-Autonity uses *mark prices* as baseline for forecast markets.  
-The framework computes **forecast prices** through:
+Autonity uses mark prices; forecasts must be translated accordingly.
 
-- Predicted percentage change  
-- Proper price-mapping equations  
-- Adjustments for volatility and structural uncertainty when needed  
+The mapping layer uses:
 
-This price mapping layer is one of the key edges of the strategy — implementation details are released only after the competition.
+* Predicted percentage change
+* Price-mapping formulas
+* Adjustments for volatility or regime uncertainty
 
----
-
-## Target Series Overview
-
-### 1. CPIZ25 – Inflation (MoM)  
-
-- Modeled using GLMs with appropriate transformations when necessary  
-- Combines **Gaussian** and **Gamma** experimentation in early stages, with selection guided by diagnostics (residuals, dispersion, tail behavior)  
-- Sensitive to structural regimes (pandemic, high inflation, normalization)  
-- Uses a hybrid lag/shift architecture  
-- Produces forecasts close to market consensus but with systematic improvements on turning points
+This layer is intentionally private until the competition ends.
 
 ---
 
-### 2. GDPF26 – GDP (QoQ)  
+## Target Series (Overview)
 
-- Smoother and more stable series  
-- Best modeled with **parsimonious Gaussian GLMs**  
-- Lag effects are present but weaker compared to inflation  
-- Price mapping is relatively straightforward and lower-volatility  
-- Focus on stability and robustness rather than overfitting small variations
+### **CPIZ25 – Inflation (MoM)**
 
----
+* GLM-based modeling with Gaussian/Gamma alternatives
+* Strong regime sensitivity
+* Lag architecture to capture delayed drift
+* Often close to consensus but improves turning-point detection
 
-### 3. UERF26 – Unemployment (MoM, forward contract)  
 
-- Noisy series, sensitive to revisions and local shocks  
-- Requires careful specification and regular diagnostics  
-- Regime modeling is important to avoid overreacting to unstable periods  
-- Works best with ultra-parsimonious structures (few predictors, controlled lag structure)  
-- Comparative experiments with **Gaussian vs. Gamma** address asymmetry and tail risk
+### **GDPF26 – GDP (QoQ)**
 
----
+* Much smoother series
+* Gaussian GLMs work well
+* Lags matter less
+* Focus is on stability rather than squeezing minor variance
 
-### 4. UERZ25 – Unemployment (MoM, near-term / alternative contract)  
 
-- Shorter horizon, often more sensitive to immediate labor market moves  
-- Used both as a **standalone target** and as a **cross-check** for UERF26 dynamics  
-- GLM framework tests **Gamma (log link)** and **Gaussian (identity)** to capture:  
-  - Asymmetry in shocks  
-  - Occasional spikes  
-  - Concentration of mass near small monthly changes  
-- Final family choice and specification are documented in detail in the post-competition release.
+### **UERF26 – Unemployment (MoM, forward)**
+
+* Noisy, revision-prone series
+* Requires extremely parsimonious models
+* Regime detection is important
+* Gaussian vs Gamma tested for asymmetry and tail behavior
+
+
+### **UERZ25 – Unemployment (MoM, near-term)**
+
+* More sensitive to immediate labor market shifts
+* Helps cross-validate the UERF26 design
+* Gamma (log link) often useful due to asymmetry and small-change clustering
+* Final specification will be documented after the season
 
 ---
 
 ## Repository Structure (Post-Competition Release)
 
-After the Forecastathon ends, this repository will include:
+When the Forecastathon ends, the repository will include:
 
-```text
+```
 forecastathon-modeling-framework/
-│
-├── src/
-│   ├── glm_cpiz25.R
-│   ├── glm_gdpf26.R
-│   ├── glm_uerf26.R
-│   ├── glm_uerz25.R
-│   ├── preprocessing_utils.R
-│   ├── diagnostics_utils.R
-│
-├── models/
-│   ├── cpiz25_model.rds
-│   ├── gdpf26_model.rds
-│   ├── uerf26_model.rds
-│   ├── uerz25_model.rds
-│
-├── notebooks/
-│   ├── CPIZ25_analysis.ipynb
-│   ├── GDPF26_analysis.ipynb
-│   ├── UERF26_analysis.ipynb
-│   ├── UERZ25_analysis.ipynb
-│
-├── forecasts/
-│   ├── rolling_forecasts.csv
-│   ├── forecast_vs_mark_comparison.pdf
-│
-├── report/
-│   ├── strategy_summary.md
-│   ├── model_diagnostics.md
-│
-└── README.md
+  src/
+    glm_cpiz25.R
+    glm_gdpf26.R
+    glm_uerf26.R
+    glm_uerz25.R
+    preprocessing_utils.R
+    diagnostics_utils.R
+
+  models/
+    cpiz25_model.rds
+    gdpf26_model.rds
+    uerf26_model.rds
+    uerz25_model.rds
+
+  notebooks/
+    CPIZ25_analysis.ipynb
+    GDPF26_analysis.ipynb
+    UERF26_analysis.ipynb
+    UERZ25_analysis.ipynb
+
+  forecasts/
+    rolling_forecasts.csv
+    forecast_vs_mark_comparison.pdf
+
+  report/
+    strategy_summary.md
+    model_diagnostics.md
+
+  README.md
 ```
 
 ---
