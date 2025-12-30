@@ -19,6 +19,8 @@ The Autonity Forecastathon operates in an on-chain forecasting market, where pre
 
 Unlike offline benchmarks or static datasets, forecasts in this environment directly impact market outcomes, requiring disciplined modeling, calibration, and decision-making.
 
+Forecasting in this environment is fundamentally different from offline benchmarks: models are continuously evaluated under market pressure, partial information, and adversarial pricing dynamics.
+
 This repository documents the **research, methodology, and modeling framework** I use in the **Autonity Forecastathon**, a forecasting competition covering macroeconomic indicators such as:
 
 * **CPIZ25** – Inflation (MoM)
@@ -34,7 +36,7 @@ The goal here is to present:
 
 **Note:**
 
-Participation in the Forecastathon occurred **by invitation**, following outreach from within the Clearmatics ecosystem.
+Participation in the Forecastathon followed direct outreach within the Clearmatics ecosystem.
 
 ---
 
@@ -176,13 +178,10 @@ When the Forecastathon ends, the repository will include:
 forecastathon-modeling-framework/
 
   src/			#R code
-  (read the "Code Availability" title)
-
+  
   models/
-    (read the "Code Availability" title)	
 
   notebooks/
-    (read the "Code Availability" title)
     
   results/
      (released post-competition)
