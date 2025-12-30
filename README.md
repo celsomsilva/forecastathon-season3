@@ -174,18 +174,21 @@ When the Forecastathon ends, the repository will include:
 
 ```
 forecastathon-modeling-framework/
-  src/
-    (R code)
+
+  src/			#R code
+  (read the "Code Availability" title)
 
   models/
-    (released post-competition)	
+    (read the "Code Availability" title)	
 
   notebooks/
-
-  forecasts/
-
-  report/
-
+    (read the "Code Availability" title)
+    
+  results/
+     (released post-competition)
+     forecasts/		# Automatic forecast CSVs
+     charts/		# Automatically generated charts
+     
   README.md
   
   LICENSE
