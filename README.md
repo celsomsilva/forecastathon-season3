@@ -3,13 +3,21 @@
 
 **Forecast Blockchain Academy**
 
-*A high-level overview of my modeling strategy for the Autonity Forecastathon — without revealing implementation details during the competition.*
+A high-level overview of my modeling strategy for the [Autonity Forecastathon](https://forecastathon.ai) — without revealing implementation details during the competition.
 
 ---
 
+
 ## Project Status
 
-Work in progress — this repo will expand throughout the season.
+**Completed — Forecastathon Season 3**
+
+This repository documents the final state of the forecasting framework
+applied during Autonity Forecastathon Season 3.
+
+The approach finished **6th overall** in the final leaderboard.  
+
+see official results: [Forecastathon-Leaderboard](https://forecastathon.ai/leaderboard?table=forecast-accuracy)
 
 ---
 
@@ -180,12 +188,9 @@ forecastathon-modeling-framework/
   src/			#R code
   
   models/
-
-  notebooks/
     
   results/
-     (released post-competition)
-     forecasts/		# Automatic forecast CSVs
+     data/		# Automatic forecast CSVs
      charts/		# Automatically generated charts
      
   README.md
