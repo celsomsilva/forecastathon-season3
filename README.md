@@ -251,7 +251,7 @@ This project was developed by an engineer and data scientist with a background i
 ## Contact  
 
 - [LinkedIn](https://linkedin.com/in/celso-m-silva)  
-- Or open an [issue](https://github.com/celsomsilva/forecastathon/issues)
+- Or open an [issue](https://github.com/celsomsilva/forecastathon-season3/issues)
 
 
 
