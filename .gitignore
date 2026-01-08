@@ -4,7 +4,8 @@
 .Rproj.user/
 .Ruserdata
 .Rapp.history
-.rds
+*.rds
+*.R
 
 # RStudio files
 *.Rproj
@@ -15,7 +16,7 @@
 *.swp
 *.swo
 *.DS_Store
-.ipynb_checkpoints/
+*.ipynb_checkpoints/
 
 # Reports and cache
 *.html
@@ -24,12 +25,16 @@
 docs/_book/
 cache/
 *.log
+*.Rmd
+*.qmd
+reports/
 
 # Package building
 *.tar.gz
 *.Rcheck/
 
-# data
-data/
-*.csv
+# Data
+*.xls
 *.xlsx
+*.csv
+!results/data/*.csv
