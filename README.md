@@ -1,4 +1,4 @@
-# Forecastathon – 6th Place Overall  
+# Forecastathon – 5th Place Overall  
 ## Statistical Modeling for On-Chain Forecast Markets (Research Edition)
 
 
@@ -15,7 +15,7 @@ A high-level overview of my modeling strategy for the [Autonity Forecastathon](h
 **Completed — Forecastathon Season 3**
 
 This repository documents a statistically grounded forecasting framework
-used in Autonity Forecastathon Season 3, finishing **6th overall** in an open,
+used in Autonity Forecastathon Season 3, finishing **5th overall** in an open,
 on-chain forecasting competition with real market incentives.
   
 
