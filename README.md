@@ -1,4 +1,4 @@
-# Forecastathon – 5th Place Overall  
+# Forecastathon Season 3 – 5th Place Overall  
 ## Statistical Modeling for On-Chain Forecast Markets (Research Edition)
 
 
@@ -232,6 +232,7 @@ infrastructure.
 
 References:
 
+- CoinDesk (2018) – [Blockchain Finance Startup Clearmatics Raises $12 Million in New Funding](https://www.coindesk.com/markets/2018/10/10/blockchain-finance-startup-clearmatics-raises-12-million-in-new-funding)
 - CoinDesk (2019) – [Top banks invest $50 million to build blockchain settlement system](https://www.coindesk.com/markets/2019/05/17/top-banks-investing-50-million-to-build-blockchain-settlement-system)
 - CoinDesk (2019) – [Barclays and Clearmatics Call on Coders to Help Blockchains Talk to Each Other](https://www.coindesk.com/markets/2019/01/17/barclays-and-clearmatics-call-on-coders-to-help-blockchains-talk-to-each-other)
 - CoinDesk (2025) – [Clearmatics' New DeFi Derivatives Let Traders Bet on Anything, but It's Not a Prediction Market](https://www.coindesk.com/business/2025/07/28/clearmatics-new-defi-derivatives-let-traders-bet-on-anything-but-it-s-not-a-prediction-market)
