@@ -4,6 +4,7 @@
 
 
 **Forecast Blockchain Academy**
+> “A data scientist is not a button pusher.” — Prof. Luiz Paulo Fávero - USP
 
 A high-level overview of my modeling strategy for the [Autonity Forecastathon](https://forecastathon.ai) — without revealing implementation details during the competition.
 
