@@ -15,12 +15,10 @@ A high-level overview of my modeling strategy for the [Autonity Forecastathon](h
 
 **Completed — Forecastathon Season 3**
 
-This repository documents a statistically grounded forecasting framework
-used in Autonity Forecastathon Season 3, finishing **5th overall** in an open,
-on-chain forecasting competition with real market incentives.
+This repository documents a statistically grounded forecasting framework used in Autonity Forecastathon Season 3, finishing **5th overall** in an open, on-chain forecasting competition with real market incentives.
   
 
-see official results: [Forecastathon-Leaderboard](https://forecastathon.ai/leaderboard?table=forecast-accuracy)
+See official results: [Forecastathon-Leaderboard](https://forecastathon.ai/leaderboard?table=forecast-accuracy)
 
 ---
 
@@ -97,7 +95,7 @@ Economic time series change character during:
 * High inflation periods
 * Post-pandemic normalization
 
-Ignoring regime shifts tends to mislead models.
+Ignoring regime shifts tends to mislead models. 
 This approach treats structural breaks as first-class modeling components.
 
 
@@ -145,14 +143,13 @@ This layer is intentionally private until the competition ends.
 
 * More sensitive to immediate labor market shifts
 * Helps cross-validate the UERF26 design
-* Gamma (log link) often useful due to asymmetry and small-change clustering
+* Gamma (log link) is often useful due to asymmetry and small-change clustering
 * Final specification will be documented after the season
 
 
 ### BTCVOL – Short-Term Implied Bitcoin Volatility Contracts
 
-In addition to macroeconomic indicators, the strategy was extended to
-short-dated Bitcoin volatility contracts (weekly expiries).
+In addition to macroeconomic indicators, the strategy was extended to short-dated Bitcoin volatility contracts (weekly expiries).
 
 These instruments require a fundamentally different treatment:
 - No macro releases
@@ -205,16 +202,11 @@ forecastathon-modeling-framework/
 
 ## Code Availability
 
-To preserve the integrity of ongoing and future Forecastathon seasons,
-implementation details are not publicly released during active participation.
+To preserve the integrity of ongoing and future Forecastathon seasons, implementation details are not publicly released during active participation.
 
-This repository is intentionally focused on results, decision-making behavior,
-and modeling philosophy, rather than full code disclosure.
+This repository is intentionally focused on results, decision-making behavior, and modeling philosophy, rather than full code disclosure.
 
-After the competition period, I’m open to discussing the modeling approach and
-selected implementation details in private, context-appropriate conversations
-with researchers, practitioners, students, or hiring teams interested in
-forecasting markets and applied statistical modeling.
+After the competition period, I’m open to discussing the modeling approach and selected implementation details in private, context-appropriate conversations with researchers, practitioners, students, or hiring teams interested in forecasting markets and applied statistical modeling.
 
 
 ---
@@ -222,14 +214,9 @@ forecasting markets and applied statistical modeling.
 ## External Context
 
 
-Clearmatics is a London-based company focused on designing protocols
-and market infrastructure for decentralized and institutional
-financial systems.
+Clearmatics is a London-based company focused on designing protocols and market infrastructure for decentralized and institutional financial systems.
 
-Since the mid-2010s, Clearmatics has been cited in institutional
-initiatives involving major global banks, particularly in efforts
-related to blockchain-based settlement and financial market
-infrastructure.
+Since the mid-2010s, Clearmatics has been cited in institutional initiatives involving major global banks, particularly in efforts related to blockchain-based settlement and the financial market infrastructure.
 
 References:
 
