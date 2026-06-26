@@ -1,19 +1,19 @@
-# Forecastathon Season 3 – 5th Place Overall  
+# Forecastathon Season 3 - 5th Place Overall  
 ## Statistical Modeling for On-Chain Forecast Markets (Research Edition)
 
 
 
 **Forecast Blockchain Academy**
-> “A data scientist is not a button pusher.” — Prof. Luiz Paulo Fávero - USP
+> “A data scientist is not a button pusher.” - Prof. Luiz Paulo Fávero - USP
 
-A high-level overview of my modeling strategy for the [Autonity Forecastathon](https://forecastathon.ai) — without revealing implementation details during the competition.
+A high-level overview of my modeling strategy for the [Autonity Forecastathon](https://forecastathon.ai) - without revealing implementation details during the competition.
 
 ---
 
 
 ## Project Status
 
-**Completed — Forecastathon Season 3**
+**Completed - Forecastathon Season 3**
 
 This repository documents a statistically grounded forecasting framework used in Autonity Forecastathon Season 3, finishing **5th overall** in an open, on-chain forecasting competition with real market incentives.
   
@@ -32,11 +32,11 @@ Forecasting in this environment is fundamentally different from offline benchmar
 
 This repository documents the **research, methodology, and modeling framework** I use in the **Autonity Forecastathon**, a forecasting competition covering macroeconomic indicators such as:
 
-* **CPIZ25** – Inflation (MoM)
-* **GDPF26** – GDP (QoQ)
-* **UERF26** – Unemployment (MoM, forward)
-* **UERZ25** – Unemployment (MoM, near-term contract)
-* **BTCVOL** – Short-Term Implied Bitcoin Volatility Contracts
+* **CPIZ25** - Inflation (MoM)
+* **GDPF26** - GDP (QoQ)
+* **UERF26** - Unemployment (MoM, forward)
+* **UERZ25** - Unemployment (MoM, near-term contract)
+* **BTCVOL** - Short-Term Implied Bitcoin Volatility Contracts
 
 The goal here is to present:
 
@@ -71,7 +71,7 @@ Instead of defaulting to ARIMA/Prophet/neural networks, the approach emphasizes:
 * Diagnostics-driven selection
 * Economic plausibility
 
-This keeps the model understandable and stable — qualities that matter in real forecasting, not just competitions.
+This keeps the model understandable and stable - qualities that matter in real forecasting, not just competitions.
 
 
 
@@ -99,7 +99,7 @@ Ignoring regime shifts tends to mislead models.
 This approach treats structural breaks as first-class modeling components.
 
 
-### 4. Clean Prediction → Price Mapping
+### 4. Clean Prediction -> Price Mapping
 
 Autonity uses mark prices; forecasts must be translated accordingly.
 
@@ -115,7 +115,7 @@ This layer is intentionally private until the competition ends.
 
 ## Target Series
 
-### CPIZ25 – Inflation (MoM)
+### CPIZ25 - Inflation (MoM)
 
 * GLM-based modeling with Gaussian/Gamma alternatives
 * Strong regime sensitivity
@@ -123,7 +123,7 @@ This layer is intentionally private until the competition ends.
 * Often close to consensus but improves turning-point detection
 
 
-### GDPF26 – GDP (QoQ)
+### GDPF26 - GDP (QoQ)
 
 * Much smoother series
 * Gaussian GLMs work well
@@ -131,7 +131,7 @@ This layer is intentionally private until the competition ends.
 * Focus is on stability rather than squeezing minor variance
 
 
-### UERF26 – Unemployment (MoM, forward)
+### UERF26 - Unemployment (MoM, forward)
 
 * Noisy, revision-prone series
 * Requires extremely parsimonious models
@@ -139,7 +139,7 @@ This layer is intentionally private until the competition ends.
 * Gaussian vs Gamma tested for asymmetry and tail behavior
 
 
-### UERZ25 – Unemployment (MoM, near-term)
+### UERZ25 - Unemployment (MoM, near-term)
 
 * More sensitive to immediate labor market shifts
 * Helps cross-validate the UERF26 design
@@ -147,7 +147,7 @@ This layer is intentionally private until the competition ends.
 * Final specification will be documented after the season
 
 
-### BTCVOL – Short-Term Implied Bitcoin Volatility Contracts
+### BTCVOL - Short-Term Implied Bitcoin Volatility Contracts
 
 In addition to macroeconomic indicators, the strategy was extended to short-dated Bitcoin volatility contracts (weekly expiries).
 
