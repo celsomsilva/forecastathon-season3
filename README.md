@@ -80,7 +80,7 @@ This keeps the model understandable and stable - qualities that matter in real f
 Macro signals rarely move instantly.
 The framework systematically evaluates:
 
-* 1–3 month lags
+* 1-3 month lags
 * Regime-lag interactions
 * Stability across rolling windows
 
@@ -220,10 +220,10 @@ Since the mid-2010s, Clearmatics has been cited in institutional initiatives inv
 
 References:
 
-- CoinDesk (2018) – [Blockchain Finance Startup Clearmatics Raises $12 Million in New Funding](https://www.coindesk.com/markets/2018/10/10/blockchain-finance-startup-clearmatics-raises-12-million-in-new-funding)
-- CoinDesk (2019) – [Top banks invest $50 million to build blockchain settlement system](https://www.coindesk.com/markets/2019/05/17/top-banks-investing-50-million-to-build-blockchain-settlement-system)
-- CoinDesk (2019) – [Barclays and Clearmatics Call on Coders to Help Blockchains Talk to Each Other](https://www.coindesk.com/markets/2019/01/17/barclays-and-clearmatics-call-on-coders-to-help-blockchains-talk-to-each-other)
-- CoinDesk (2025) – [Clearmatics' New DeFi Derivatives Let Traders Bet on Anything, but It's Not a Prediction Market](https://www.coindesk.com/business/2025/07/28/clearmatics-new-defi-derivatives-let-traders-bet-on-anything-but-it-s-not-a-prediction-market)
+- CoinDesk (2018) - [Blockchain Finance Startup Clearmatics Raises $12 Million in New Funding](https://www.coindesk.com/markets/2018/10/10/blockchain-finance-startup-clearmatics-raises-12-million-in-new-funding)
+- CoinDesk (2019) - [Top banks invest $50 million to build blockchain settlement system](https://www.coindesk.com/markets/2019/05/17/top-banks-investing-50-million-to-build-blockchain-settlement-system)
+- CoinDesk (2019) - [Barclays and Clearmatics Call on Coders to Help Blockchains Talk to Each Other](https://www.coindesk.com/markets/2019/01/17/barclays-and-clearmatics-call-on-coders-to-help-blockchains-talk-to-each-other)
+- CoinDesk (2025) - [Clearmatics' New DeFi Derivatives Let Traders Bet on Anything, but It's Not a Prediction Market](https://www.coindesk.com/business/2025/07/28/clearmatics-new-defi-derivatives-let-traders-bet-on-anything-but-it-s-not-a-prediction-market)
 
 ---
 
