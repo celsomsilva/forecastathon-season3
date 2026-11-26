@@ -1,6 +1,6 @@
 #############################
 
-# Forecastathon — BTCVOL51W25
+# Forecastathon - BTCVOL51W25
 
 # Source code intentionally not disclosed.
 
