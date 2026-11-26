@@ -1,6 +1,6 @@
 #############################
 
-# Forecastathon — CPI (CPIZ25)
+# Forecastathon - CPI (CPIZ25)
 
 # Source code intentionally not disclosed.
 

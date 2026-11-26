@@ -1,6 +1,6 @@
 #############################
 
-# Forecastathon — UNEMPLOYMENT (UERZ25)
+# Forecastathon  UNEMPLOYMENT (UERZ25)
 
 # Source code intentionally not disclosed.
 
